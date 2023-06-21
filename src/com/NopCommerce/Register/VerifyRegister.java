@@ -45,16 +45,16 @@ public class VerifyRegister {
 
 	@Test
 	public void TC03_VerifyRegisterWithWrongEmail() {
-		register.inputEmail("nop");
+		register.inputEmail("");
 		register.verifyEmailMsg();
 	}
 
 	@Test
 	public void TC04_VerifyRegisterWithPasswordLessThan6Chars() {
-		register.inputFirstName("luan");
-		register.inputLastName("truong");
-		register.inputEmail("automationfc.vn@gmail.com");
-		register.inputPassword("test");
+		register.inputFirstName("");
+		register.inputLastName("");
+		register.inputEmail("");
+		register.inputPassword("");
 		register.inputConfirmPassword("");
 		register.clickOnRegisterButton();
 		register.verifyPasswordErrorMsgDisplayed();
@@ -62,22 +62,22 @@ public class VerifyRegister {
 
 	@Test
 	public void TC05_VerifyRegisterWithIncorrectConfirmPassword() {
-		register.inputFirstName("luan");
-		register.inputLastName("truong");
-		register.inputEmail("automationfc.vn@gmail.com");
-		register.inputPassword("automationfc");
-		register.inputConfirmPassword("automationfc@");
+		register.inputFirstName("");
+		register.inputLastName("");
+		register.inputEmail("");
+		register.inputPassword("");
+		register.inputConfirmPassword("");
 		register.clickOnRegisterButton();
 		register.verifyConfirmPasswordErrorMsgDisplayed();
 	}
 
 	@Test
 	public void TC06_VerifyRegisterSuccess() {
-		register.inputFirstName("luan");
-		register.inputLastName("truong");
-		register.inputEmail("automationfc.vn+3@gmail.com");
-		register.inputPassword("automationfc");
-		register.inputConfirmPassword("automationfc");
+		register.inputFirstName("");
+		register.inputLastName("");
+		register.inputEmail("");
+		register.inputPassword("");
+		register.inputConfirmPassword("");
 		register.clickOnRegisterButton();
 		register.verifyResultMsgDisplayed();
 	}
